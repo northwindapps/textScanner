@@ -1,6 +1,6 @@
-function getSrc () {
+var ta = null;
 
-var ta = document.querySelector("#ta");
+function getSrc () {
 var src = ta.value.replace(/\n\r?/g, '<br>');
 getValue(src)
 
@@ -13,7 +13,8 @@ function getValue(data){
 }
 
 
-window.onload = function(){ 
+window.onload = async function(){ 
+    ta = await document.querySelector("#ta");
     // your code 
     console.log('welcome back');
     
